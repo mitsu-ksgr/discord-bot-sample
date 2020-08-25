@@ -27,3 +27,14 @@ Discord bot sample
 - Copy URL, and then open browser.
 - Invite bot to your guild.
 
+
+### How to use
+
+```sh
+$ docker-compose build
+$ docker-compose run bot
+root@e20938b900c5:/app# pipenv install
+root@e20938b900c5:/app# pipenv run python bot.py
+Logged in as: sample app (ID: 747806654476714056)
+```
+
