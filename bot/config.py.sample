@@ -1,0 +1,14 @@
+#
+# Discord Bot Configurations.
+#
+# this file is template for a config.py file.
+#
+
+# Application Information
+client_id = ""
+client_secret = ""
+
+
+# BOT
+discord_token = ""
+
