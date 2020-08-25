@@ -1,0 +1,10 @@
+version: '3'
+services:
+  bot:
+    container_name: bot
+    build:
+      context: ./bot
+      dockerfile: Dockerfile
+    volumes:
+      - ./bot:/app
+
