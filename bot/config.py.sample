@@ -10,5 +10,5 @@ client_secret = ""
 
 
 # BOT
-discord_token = ""
+bot_token = ""
 
