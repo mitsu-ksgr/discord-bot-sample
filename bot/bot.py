@@ -47,6 +47,11 @@ async def fortune(ctx):
     ])
     await ctx.send(result)
 
+@bot.command()
+async def quit(ctx):
+    await ctx.send('goodbye!')
+    await ctx.bot.logout()
+    return
 
 bot.run(config.bot_token)
 
