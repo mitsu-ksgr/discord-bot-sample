@@ -17,7 +17,7 @@ Discord bot sample
 - 'New Application' > Enter "Name" > 'Create'
 - application page > Left Pane 'Bot' > Bild-A-Bot 'Add Bot' > 'Yes, do it!'
 
-#### 2. Get the Acces token.
+#### 2. Get the bot token.
 - open: https://discord.com/developers/applications, goto bot page.
 - Build-A-Bot pane > Token: 'Copy'
 
@@ -30,11 +30,31 @@ Discord bot sample
 
 ### How to use
 
+1. Setup config.py
+
+```sh
+$ cp ./bot/config.py.sample ./bot/config.py
+```
+
+2. Add your token to config.py
+
+```config.py
+# BOT
+bot_token = "xxxxxxxxxxxxxxx" # <--- bot token
+```
+
+3. Run
+
 ```sh
 $ docker-compose build
-$ docker-compose run bot
-root@e20938b900c5:/app# pipenv install
-root@e20938b900c5:/app# pipenv run python bot.py
+$ docker-compose run bot python bot.py
 Logged in as: sample app (ID: 747806654476714056)
+```
+
+4. Check your discord guild, and use command!
+
+```discord
+user: >hello
+bot: hello, user.
 ```
 
