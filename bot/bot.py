@@ -47,6 +47,10 @@ async def fortune(ctx):
     ])
     await ctx.send(result)
 
+@bot.command(name='おみくじ')
+async def _fortune(ctx):
+    await fortune(ctx)
+
 @bot.command()
 async def quit(ctx):
     await ctx.send('goodbye!')
