@@ -53,5 +53,13 @@ async def quit(ctx):
     await ctx.bot.logout()
     return
 
+@bot.command()
+async def notice(ctx, msg: str):
+    embed = discord.Embed(
+            title='Notice Test',
+            description=msg,
+            color=discord.Colour.blurple())
+    await ctx.send(embed=embed)
+
 bot.run(config.bot_token)
 
