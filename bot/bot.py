@@ -6,7 +6,13 @@ import random
 import config
 
 
-bot = commands.Bot(command_prefix='>')
+# Activate members
+intents = discord.Intents.default()
+intents.members = True
+
+#bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix = '#>', intents = intents)
+
 
 #
 # Event Changes
@@ -64,6 +70,26 @@ async def notice(ctx, msg: str):
             description=msg,
             color=discord.Colour.blurple())
     await ctx.send(embed=embed)
+
+#------------
+# test
+#------------
+@bot.command()
+async def teams(ctx, audience):
+    channel_name = "General"
+    vc = discord.utils.get(ctx.guild.voice_channels, name=channel_name)
+    if vc is None:
+        await ctx.send(f"「{channel_name}」が見つかりません。")
+        return
+
+    members = vc.members
+    if len(members) == 0:
+        await ctx.send(f"{channel_name} には誰もいません。")
+        return
+
+    names = ','.join([member.name for member in members])
+    await ctx.send(names)
+    return
 
 bot.run(config.bot_token)
 

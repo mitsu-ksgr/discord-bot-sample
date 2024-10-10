@@ -7,7 +7,7 @@ ENV LANG C.UTF-8
 ENV PYTHONDONTWRITEBYTECODE 1
 
 # Install dependencies
-RUN apt-get update && apt-get install -y vim \
+RUN apt-get update && apt-get install -y vim libffi-dev libnacl-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
